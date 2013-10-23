@@ -1,0 +1,118 @@
+<head>
+  <link rel="stylesheet" href="./simple-grid.css" />
+</head>
+<body>
+  <!-- Counting down on desktop, up on mobile -->
+  <div data-columns="12">
+    <div class="demo"
+         data-columns="3 6-desktop 1-mobile"></div>
+    <div class="demo"
+         data-columns="3-desktop 2-mobile"></div>
+    <div class="demo"
+         data-columns="2-desktop 3-mobile"></div>
+    <div class="demo"
+         data-columns="1-desktop 6-mobile"></div>
+  </div>
+
+  <!-- Counting up on desktop, down on mobile -->
+  <div data-columns="12">
+    <div class="demo"
+         data-columns="6-mobile 1-desktop"></div>
+    <div class="demo"
+         data-columns="3-mobile 2-desktop"></div>
+    <div class="demo"
+         data-columns="2-mobile 3-desktop"></div>
+    <div class="demo"
+         data-columns="1-mobile 6-desktop"></div>
+  </div>
+
+  <!-- Ragged edge -->
+  <div data-gravity="right"
+       data-columns="12">
+    <div class=""
+         data-columns="6"
+         data-priority="2">
+      <div class="demo"
+           data-columns="6"></div>
+      <div class="demo"
+           data-columns="5"></div></div>
+  </div>
+
+  <!-- Pathological case -->
+  <div data-columns="12">
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+    <div class="demo"
+         data-columns="1"></div>
+  </div>
+
+  <!-- Slightly more reasonable -->
+  <div data-columns="12">
+    <div class="demo"
+         data-columns="2"></div>
+    <div class="demo"
+         data-columns="2"></div>
+    <div class="demo"
+         data-columns="2"></div>
+    <div class="demo"
+         data-columns="2"></div>
+    <div class="demo"
+         data-columns="2"></div>
+    <div class="demo"
+         data-columns="2"></div>
+  </div>
+
+  <!-- Newspaper layout -->
+  <div data-columns="12">
+    <div class="demo"
+         data-columns="3"></div>
+    <div class="demo"
+         data-columns="3"></div>
+    <div class="demo"
+         data-columns="3"></div>
+    <div class="demo"
+         data-columns="3"></div>
+  </div>
+
+
+  <!-- Standard 3 column -->
+  <div data-columns="12">
+    <div class="demo"
+         data-columns="4"></div>
+    <div class="demo"
+         data-columns="4"></div>
+    <div class="demo"
+         data-columns="4"></div>
+  </div>
+
+  <!-- Two column -->
+  <div data-columns="12">
+    <div class="demo"
+         data-columns="6"></div>
+    <div class="demo"
+         data-columns="6"></div>
+  </div>
+
+  <!-- YEARGH -->
+  <footer />
+</body>

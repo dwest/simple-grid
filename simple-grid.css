@@ -1,0 +1,111 @@
+/* Active Styles */
+
+.demo {
+    border: solid thin #8CB5D6;
+    background: #2461AA;
+    text-align: center;
+    padding-top: 0.25em;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    min-height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.demo:before { content: attr(data-columns);}
+
+/* Columns */
+body {
+    width: 100%;
+}
+
+*[data-columns] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+}
+
+*[data-columns]:not(:last-child) {
+    padding-right: 0.2em;
+}
+
+*[data-columns]:last-child:after
+{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* Any column with an explicit count */
+*[data-columns|="12"],
+*[data-columns|="11"],
+*[data-columns|="10"],
+*[data-columns|="9"],
+*[data-columns|="8"],
+*[data-columns|="7"],
+*[data-columns|="6"],
+*[data-columns|="5"],
+*[data-columns|="4"],
+*[data-columns|="3"],
+*[data-columns|="2"],
+*[data-columns|="1"]
+{
+    float: left;
+    display: inline-block;
+    clear: none;
+}
+
+*[data-columns~="12"] {width: 100%;                   float: left; display: inline-block; clear: none; }
+*[data-columns~="11"] {width: calc( 100% / 12 * 11 ); float: left; display: inline-block; clear: none; }
+*[data-columns~="10"] {width: calc( 100% / 12 * 10 ); float: left; display: inline-block; clear: none; }
+*[data-columns~="9"]  {width: calc( 100% / 12 * 9 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="8"]  {width: calc( 100% / 12 * 8 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="7"]  {width: calc( 100% / 12 * 7 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="6"]  {width: calc( 100% / 12 * 6 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="5"]  {width: calc( 100% / 12 * 5 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="4"]  {width: calc( 100% / 12 * 4 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="3"]  {width: calc( 100% / 12 * 3 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="2"]  {width: calc( 100% / 12 * 2 );  float: left; display: inline-block; clear: none; }
+*[data-columns~="1"]  {width: calc( 100% / 12 * 1 );  float: left; display: inline-block; clear: none; }
+
+/* Allow desktop sizes to override default size */ 
+@media (min-width: 700px) {
+    *[data-columns~="12-desktop"] {width: 100%;                   }
+    *[data-columns~="11-desktop"] {width: calc( 100% / 12 * 11 ); }
+    *[data-columns~="10-desktop"] {width: calc( 100% / 12 * 10 ); }
+    *[data-columns~="9-desktop"]  {width: calc( 100% / 12 * 9 );  }
+    *[data-columns~="8-desktop"]  {width: calc( 100% / 12 * 8 );  }
+    *[data-columns~="7-desktop"]  {width: calc( 100% / 12 * 7 );  }
+    *[data-columns~="6-desktop"]  {width: calc( 100% / 12 * 6 );  }
+    *[data-columns~="5-desktop"]  {width: calc( 100% / 12 * 5 );  }
+    *[data-columns~="4-desktop"]  {width: calc( 100% / 12 * 4 );  }
+    *[data-columns~="3-desktop"]  {width: calc( 100% / 12 * 3 );  }
+    *[data-columns~="2-desktop"]  {width: calc( 100% / 12 * 2 );  }
+    *[data-columns~="1-desktop"]  {width: calc( 100% / 12 * 1 );  }
+}
+
+/* Allow desktop sizes to override default and desktop size */ 
+@media (max-width: 700px) and (min-width: 300px) {
+    *[data-columns~="12-mobile"] {width: 100%;                   }
+    *[data-columns~="11-mobile"] {width: calc( 100% / 12 * 11 ); }
+    *[data-columns~="10-mobile"] {width: calc( 100% / 12 * 10 ); }
+    *[data-columns~="9-mobile"]  {width: calc( 100% / 12 * 9 );  }
+    *[data-columns~="8-mobile"]  {width: calc( 100% / 12 * 8 );  }
+    *[data-columns~="7-mobile"]  {width: calc( 100% / 12 * 7 );  }
+    *[data-columns~="6-mobile"]  {width: calc( 100% / 12 * 6 );  }
+    *[data-columns~="5-mobile"]  {width: calc( 100% / 12 * 5 );  }
+    *[data-columns~="4-mobile"]  {width: calc( 100% / 12 * 4 );  }
+    *[data-columns~="3-mobile"]  {width: calc( 100% / 12 * 3 );  }
+    *[data-columns~="2-mobile"]  {width: calc( 100% / 12 * 2 );  }
+    *[data-columns~="1-mobile"]  {width: calc( 100% / 12 * 1 );  }
+}
+
+*[data-gravity~="right"] {
+    float: right;
+}
+
+*[data-gravity~="right"] > *[data-columns] {
+    float: right;
+}
